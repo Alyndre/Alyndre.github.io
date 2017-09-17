@@ -1,22 +1,28 @@
 <template>
-  <div id="slide">
-    <section id="me">
+  <div class="slide">
+    <section>
       <div class="items">
-        <h1 class="animated fadeInUp">{{ title }}</h1>
-        <h2 class="animated fadeInUp">{{ subtitle }}</h2>
+        <div class="inner">
+          <p>I'm a young developer based in Spain.</p>
+          <p>I make computer stuff. That's the long and short of it.</p>
+          <p>I use <span>Vue</span> for front-end, <span>Node.js</span> for server, <span>MongoDB</span> for databases and <span>Python</span> with TensorFlow or Keras for AI.</p>
+          <p> I can also work with the good, most established <span>PHP</span> or <span>Java</span> too.</p>
+        </div>
       </div>
     </section>
   </div>
-</template>w
+</template>
 
 <script>
 export default {
   name: 'slide',
   data() {
     return {
-      title: 'Daniel Gomez',
-      subtitle: '> developer'
     }
+  },
+  methods: {
+  },
+  mounted() {
   }
 }
 </script>
@@ -24,8 +30,11 @@ export default {
 <style lang="scss" scoped>
   @import "./styles/settings.scss";
   
-  #slide {
+  .slide {
+    //background-color: $nord5;
+    position: relative;
     height: 100vh;
+    width: 100%;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
@@ -55,20 +64,28 @@ export default {
       flex-shrink: 0;
       .items {
         width: 100%;
-      }
-      h1{
-          font-weight: 500;
-          font-size: 4rem;
-          margin-bottom: 0.5rem;
-          margin-top: 0rem;
-      }
-      h2 {
-          font-weight: 300;
-          margin-top: 1rem;
-          font-size: 2rem;
-      }
-      h1, h2 {
-        color: $nord4;
+        .inner {
+          text-align: left;
+          margin: 0 auto;
+          width: fit-content;
+          z-index: 2;
+          p {
+            color: $nord3;
+            width: 40%;
+            margin-left: 50%;
+            font-size: 1.6rem;
+            z-index: 2;
+            span {
+              color: $nord0;
+              font-weight: 500;
+              text-decoration: underline;
+              cursor: pointer;
+              &:hover {
+                background-color: $nord13;
+              }
+            }
+          }
+        }
       }
     }
   }
