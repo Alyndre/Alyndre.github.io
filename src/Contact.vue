@@ -1,9 +1,7 @@
 <template>
-  <div class="contact">
-    <section>
+  <section>
       
-    </section>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -15,9 +15,17 @@
         hoverMode="grab"
         :clickEffect="true"
         clickMode="push"></vue-particles>
-      <home></home>
       <slide></slide>
-      <contact></contact>
+      <slide></slide>
+      <slide></slide>
+      <div class="backgrounds">
+        <div class="dark-background">
+          <div class="light-transition"></div>
+        </div>
+        <div class="light-background">
+          <div class="dark-transition"></div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -54,12 +62,39 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, $nord6 50%, $nord0 50%);
-    &.state1 {
-      //background-color: $nord0;
-    }
-    &.state2 {
-      //background-color: $nord6;
+    //background: linear-gradient(-10deg, $nord6 50%, $nord0 50%);
+    .backgrounds {
+      position: absolute;
+      top:0;
+      z-index: -1;
+      width: 100%;
+      overflow: hidden;
+      .light-background, .dark-background {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+      .light-background {
+        background-color: $nord6;
+        z-index: 1;
+      }
+      .dark-background {
+        background-color: $nord0;
+        z-index: 2;
+      }
+      .light-transition, .dark-transition {
+        position: absolute;
+        //height: 100px;
+        //width: 100%;
+        bottom:-100px;
+      }
+      .light-transition {
+        border-bottom: 200px solid $nord6;
+	      border-left: 100vw solid $nord0;
+      }
+      .dark-transition {
+
+      }
     }
     #particles-js {
       height: 100vh;
