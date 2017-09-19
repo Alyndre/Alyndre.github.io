@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div class="inner">
     <h1 v-text="title"></h1>
     <transition appear
       v-on:before-appear="subTitleBeforeAppearHook"
@@ -7,7 +7,7 @@
       <h2 v-text="subtitle"></h2>
     </transition>
     <h2 id="underscore" v-bind:class="{ hidden: hiddenUS}">_</h2>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -45,7 +45,8 @@ export default {
 <style lang="scss" scoped>
   @import "./styles/settings.scss";
   
-  section {
+
+  .inner {
     text-align: left;
     margin: 0 auto;
     width: fit-content;

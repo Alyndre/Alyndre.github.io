@@ -15,15 +15,17 @@
         hoverMode="grab"
         :clickEffect="true"
         clickMode="push"></vue-particles>
-      <slide></slide>
-      <slide></slide>
-      <slide></slide>
+      <slide v-bind:slide-count="1"></slide>
+      <slide v-bind:slide-count="2"></slide>
+      <slide v-bind:slide-count="3"></slide>
       <div class="backgrounds">
         <div class="dark-background">
           <div class="light-transition"></div>
         </div>
         <div class="light-background">
-          <div class="dark-transition"></div>
+          <div class="medium-transition"></div>
+        </div>
+        <div class="medium-background">
         </div>
       </div>
   </div>
@@ -69,28 +71,36 @@ export default {
       z-index: -1;
       width: 100%;
       overflow: hidden;
-      .light-background, .dark-background {
+      .light-background, .dark-background, .medium-background {
         width: 100%;
         height: 100vh;
         position: relative;
       }
       .light-background {
-        background-color: $nord6;
-        z-index: 1;
+        background-color: $nord4;
+        z-index: 2;
       }
       .dark-background {
         background-color: $nord0;
-        z-index: 2;
+        z-index: 3;
       }
-      .light-transition, .dark-transition {
+      .medium-background {
+        background-color: $nord6;
+        z-index: 1;
+      }
+      .light-transition, .dark-transition, .medium-transition {
         position: absolute;
         //height: 100px;
         //width: 100%;
         bottom:-100px;
       }
       .light-transition {
-        border-bottom: 200px solid $nord6;
+        border-bottom: 200px solid $nord4;
 	      border-left: 100vw solid $nord0;
+      }
+      .medium-transition {
+        border-bottom: 200px solid $nord6;
+	      border-left: 100vw solid $nord4;
       }
       .dark-transition {
 

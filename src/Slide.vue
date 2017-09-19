@@ -2,9 +2,9 @@
   <div class="slide">
     <section>
       <div class="items">
-        <div class="inner">
-          <home></home>
-        </div>
+        <home v-if="count == 1"></home>
+        <me v-else-if="count == 2"></me>
+        <contact v-else-if="count == 3"></contact>
       </div>
     </section>
   </div>
@@ -13,10 +13,13 @@
 <script>
 import Home from './Home.vue';
 import Me from './Me.vue'
+import Contact from './Contact.vue'
 export default {
   name: 'slide',
+  props: ['slideCount'],
   data() {
     return {
+      count : this.slideCount
     }
   },
   methods: {
@@ -25,7 +28,8 @@ export default {
   },
   components: {
     'home': Home,
-    'me': Me
+    'me': Me,
+    'contact': Contact
   }
 }
 </script>
