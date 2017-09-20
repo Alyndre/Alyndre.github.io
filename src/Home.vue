@@ -1,12 +1,12 @@
 <template>
   <div class="inner">
-    <h1 v-text="title"></h1>
+    <h1 class="chevron">> </h1>
     <transition appear
-      v-on:before-appear="subTitleBeforeAppearHook"
-      v-on:appear="subTitleAppearHook" >
-      <h2 v-text="subtitle"></h2>
+      v-on:before-appear="textBeforeAppearHook"
+      v-on:appear="textAppearHook" >
+      <h1 v-text="title"></h1>
     </transition>
-    <h2 id="underscore" v-bind:class="{ hidden: hiddenUS}">_</h2>
+    <h1 id="underscore" v-bind:class="{ hidden: hiddenUS}">_</h1>
   </div>
 </template>
 
@@ -15,28 +15,26 @@ export default {
   name: 'home',
   data() {
     return {
-      title: 'Daniel Gomez',
-      subtitle: '> ',
+      //text: 'Hello!',
+      title: ' ',
       lastI: 0,
       hiddenUS: false
     }
   },
   methods: {
-    subTitleBeforeAppearHook: function() {},
+    textBeforeAppearHook: function() {},
 
-    subTitleAppearHook: function() {
-      var text = "developer";
-      //this.subtitle += "developer";
-      this.subtitle += text.charAt(this.lastI);
+    textAppearHook: function() {
+      var text = "Hello!";
+      this.title += text.charAt(this.lastI);
       this.lastI++;
-      //clearInterval(interval);
     },
     underscoreBlink: function() {
       this.hiddenUS = !this.hiddenUS;
     }
   },
   mounted() {
-    var interval = setInterval(this.subTitleAppearHook, 150);
+    var interval = setInterval(this.textAppearHook, 150);
     setInterval(this.underscoreBlink, 400);
   }
 }
@@ -47,31 +45,27 @@ export default {
   
 
   .inner {
-    text-align: left;
+    text-align: center;
     margin: 0 auto;
     width: fit-content;
   }
-  h1{
+  h1 {
       font-weight: 500;
-      font-size: 4rem;
-      margin-bottom: 0.5rem;
-      margin-top: 0rem;
-  }
-  h2 {
-      font-weight: 300;
       padding-top: 1rem;
-      font-size: 2rem;
+      font-size: 4rem;
       display: inline;
       opacity: 1;
-      margin-left: -20px;
       &#underscore {
         margin-left: -5px;
       }
       &.hidden {
         opacity: 0;
       }
+      &.chevron {
+        font-weight: 300;
+      }
   }
-  h1, h2 {
+  h1 {
     color: $nord4;
   }
 </style>

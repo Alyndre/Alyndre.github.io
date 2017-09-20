@@ -1,10 +1,10 @@
 <template>
   <div class="inner">
-    <p>I'm a young developer based in Spain.</p>
+    <p>I'm Dani, a young developer based in Spain.</p>
     <p>I make computer stuff. That's the long and short of it.</p>
     <p>I use <span v-bind:class="clas" v-on:mouseover="color">Sass</span>/<span v-bind:class="clas" v-on:mouseover="color">Javascript</span> for front-end, <span v-bind:class="clas" v-on:mouseover="color">Node.js</span> for server, <span v-bind:class="clas" v-on:mouseover="color">MongoDB</span> for databases and <span v-bind:class="clas" v-on:mouseover="color">Python</span> with TensorFlow or Keras for AI. Recently I've been playing with <span v-bind:class="clas" v-on:mouseover="color">Vue.js</span> for front-end and <span v-bind:class="clas" v-on:mouseover="color">Ionic</span> for mobile.</p>
     <p>I can also work with <span v-bind:class="clas" v-on:mouseover="color">PHP</span> or <span v-bind:class="clas" v-on:mouseover="color">Java</span>.</p>
-    <p>Finally, I also have an <span v-bind:class="clas" v-on:mouseover="color">Android</span> game in the <a href="https://play.google.com/store/apps/details?id=com.rawr.colors.android">Play Store</a></p>
+    <p>Finally, I have an <span v-bind:class="clas" v-on:mouseover="color">Android</span> game in the <a href="https://play.google.com/store/apps/details?id=com.rawr.colors.android">Play Store</a></p>
   </div>
 </template>
 

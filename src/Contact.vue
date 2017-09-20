@@ -1,6 +1,7 @@
 <template>
   <div class="inner">
-      <p>todo</p>
+      <p>Wanna say hi?</p>
+      <a href="mailto:dgm844@gmail.com">
   </div>
 </template>
 
