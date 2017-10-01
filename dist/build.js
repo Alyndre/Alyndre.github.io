@@ -12755,7 +12755,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data () {
     return {
       fullpageOptions: {
-        css3: true
+        css3: true,
+        verticalCentered: false,
+        responsive: 1
       }
     }
   },
@@ -13473,7 +13475,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].directive('fullpage', function(el, binding) {
-  $(el).fullpage(binding.value);
+  if (window.innerWidth>991){
+    $(el).fullpage(binding.value);
+  }
 });
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_1_vue_particles__["a" /* default */]);
