@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="state1">
+  <div id="app">
       <vue-particles color="#919BAF"
         :particleOpacity="0.7"
         :particlesNumber="70"
@@ -15,18 +15,15 @@
         hoverMode="grab"
         :clickEffect="true"
         clickMode="push"></vue-particles>
-      <slide v-bind:slide-count="1"></slide>
-      <slide v-bind:slide-count="2"></slide>
-      <slide v-bind:slide-count="3"></slide>
+      <div id="fullpage" v-fullpage="fullpageOptions">
+        <slide class="section active" v-bind:slide-count="1"></slide>
+        <slide class="section" v-bind:slide-count="2"></slide>
+        <slide class="section" v-bind:slide-count="3"></slide>
+      </div>
       <div class="backgrounds">
-        <div class="dark-background">
-          <div class="light-transition"></div>
-        </div>
-        <div class="light-background">
-          <div class="medium-transition"></div>
-        </div>
-        <div class="medium-background">
-        </div>
+        
+        
+        
       </div>
   </div>
 </template>
@@ -36,20 +33,10 @@ export default {
   name: 'app',
   data () {
     return {
-      scrollY: 0,
-      state: 0
+      fullpageOptions: {
+        css3: true
+      }
     }
-  },
-  methods: {
-    handleScroll () {
-      this.scrollY = window.scrollY;
-    }
-  },
-  beforeMount () {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>
@@ -65,51 +52,19 @@ export default {
     height: 100%;
     width: 100%;
     //background: linear-gradient(-10deg, $nord6 50%, $nord0 50%);
-    .backgrounds {
-      position: absolute;
-      top:0;
-      z-index: -1;
-      width: 100%;
-      overflow: hidden;
-      .light-background, .dark-background, .medium-background {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-      }
-      .light-background {
-        background-color: $nord4;
-        z-index: 2;
-      }
-      .dark-background {
-        background-color: $nord0;
-        z-index: 3;
-      }
-      .medium-background {
-        background-color: $nord6;
-        z-index: 1;
-      }
-      .light-transition, .dark-transition, .medium-transition {
-        position: absolute;
-        //height: 100px;
-        //width: 100%;
-        bottom:-100px;
-      }
-      .light-transition {
-        border-bottom: 200px solid $nord4;
-	      border-left: 100vw solid $nord0;
-      }
-      .medium-transition {
-        border-bottom: 200px solid $nord6;
-	      border-left: 100vw solid $nord4;
-      }
-      .dark-transition {
-
-      }
-    }
     #particles-js {
       height: 100vh;
       width: 100%;
       position: fixed;
+      pointer-events: none;
+      z-index: 1;
+    }
+    a {
+      text-decoration: none;
+      color: $nord10;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="inner">
+  <div id="home" class="inner">
     <h1 class="chevron">> </h1>
     <transition appear
       v-on:before-appear="textBeforeAppearHook"
@@ -7,6 +7,9 @@
       <h1 v-text="title"></h1>
     </transition>
     <h1 id="underscore" v-bind:class="{ hidden: hiddenUS}">_</h1>
+    <div class="dark-background">
+      <div class="medium-transition"></div>
+    </div>
   </div>
 </template>
 
@@ -34,7 +37,7 @@ export default {
     }
   },
   mounted() {
-    var interval = setInterval(this.textAppearHook, 150);
+    var interval = setInterval(this.textAppearHook, 200);
     setInterval(this.underscoreBlink, 400);
   }
 }
@@ -67,5 +70,22 @@ export default {
   }
   h1 {
     color: $nord4;
+  }
+
+  .dark-background{
+    position: absolute;
+    top:0;
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: $nord0;
+    .medium-transition {
+      position: absolute;
+      bottom:-100px;
+      border-bottom: 200px solid $nord4;
+      border-left: 100vw solid $nord0;
+    }
   }
 </style>
