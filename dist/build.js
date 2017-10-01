@@ -10749,7 +10749,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "#app{font-family:Raleway,sans-serif;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:100%;width:100%}#app #particles-js{height:100%;width:100%;position:fixed;pointer-events:none;z-index:1}#app a{text-decoration:none;color:#5e81ac}#app a:hover{text-decoration:underline}", ""]);
+exports.push([module.i, "#app{font-family:Raleway,sans-serif;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:100%;width:100vh}#app #particles-js{height:100%;width:100%;position:fixed;pointer-events:none;z-index:1}#app a{text-decoration:none;color:#5e81ac}#app a:hover{text-decoration:underline}", ""]);
 
 // exports
 

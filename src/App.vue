@@ -51,7 +51,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
-    width: 100%;
+    width: 100vh;
     //background: linear-gradient(-10deg, $nord6 50%, $nord0 50%);
     #particles-js {
       height: 100%;
