@@ -30,7 +30,9 @@ export default {
   data () {
     return {
       fullpageOptions: {
-        css3: true
+        css3: true,
+        verticalCentered: false,
+        responsive: 1
       }
     }
   },
