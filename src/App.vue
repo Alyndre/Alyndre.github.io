@@ -20,15 +20,11 @@
         <slide class="section" v-bind:slide-count="2"></slide>
         <slide class="section" v-bind:slide-count="3"></slide>
       </div>
-      <div class="backgrounds">
-        
-        
-        
-      </div>
   </div>
 </template>
 
 <script>
+import Slide from './Slide.vue'
 export default {
   name: 'app',
   data () {
@@ -37,6 +33,9 @@ export default {
         css3: true
       }
     }
+  },
+  components: {
+    'slide': Slide
   }
 }
 </script>

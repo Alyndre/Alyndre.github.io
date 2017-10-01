@@ -10,10 +10,12 @@
     <div class="dark-background">
       <div class="medium-transition"></div>
     </div>
+    <scroll v-bind:set-dir="down" v-bind:color="dark"></scroll>
   </div>
 </template>
 
 <script>
+import Scroll from './Scroll.vue';
 export default {
   name: 'home',
   data() {
@@ -21,7 +23,9 @@ export default {
       //text: 'Hello!',
       title: ' ',
       lastI: 0,
-      hiddenUS: false
+      hiddenUS: false,
+      down: 'down',
+      dark: 'dark'
     }
   },
   methods: {
@@ -39,6 +43,9 @@ export default {
   mounted() {
     var interval = setInterval(this.textAppearHook, 200);
     setInterval(this.underscoreBlink, 400);
+  },
+  components: {
+    'scroll': Scroll
   }
 }
 </script>
@@ -87,5 +94,9 @@ export default {
       border-bottom: 200px solid $nord4;
       border-left: 100vw solid $nord0;
     }
+  }
+  .scroll {
+    right: 55px;
+    bottom: 15px;
   }
 </style>

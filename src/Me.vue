@@ -10,16 +10,23 @@
       <div class="dark-transition"></div>
       <div class="light-transition"></div>
     </div>
+    <scroll v-bind:set-dir="up" v-bind:color="light"></scroll>
+    <scroll v-bind:set-dir="down" v-bind:color="dark"></scroll>
   </div>
 </template>
 
 <script>
-import Highlight from './Highlight.vue'
+import Highlight from './Highlight.vue';
+import Scroll from './Scroll.vue';
 export default {
   name: 'slide',
   data() {
     return {
-      clas: 's1'
+      clas: 's1',
+      down: 'down',
+      up: 'up',
+      dark: 'dark',
+      light: 'light'
     }
   },
   methods: {
@@ -28,7 +35,8 @@ export default {
   mounted() {
   },
   components: {
-    'highlight': Highlight
+    'highlight': Highlight,
+    'scroll': Scroll
   }
 }
 </script>
@@ -70,6 +78,16 @@ export default {
       bottom:-100px;
       border-bottom: 200px solid $nord6;
       border-left: 100vw solid $nord4;
+    }
+  }
+  .scroll {
+    &.down {
+      right: 55px;
+      bottom: 15px;
+    }
+    &.up {
+      top: 15px;
+      left: 55px;
     }
   }
 </style>

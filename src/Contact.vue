@@ -6,19 +6,22 @@
     <div class="light-background">
       <div class="medium-transition"></div>
     </div>
+    <scroll v-bind:set-dir="up" v-bind:color="dark"></scroll>
   </div>
 </template>
 
 <script>
+import Scroll from './Scroll.vue';
 export default {
   name: 'contact',
   data() {
     return {
+      up: 'up',
+      dark: 'dark',
     }
   },
-  methods: {
-  },
-  mounted() {
+  components: {
+    'scroll': Scroll
   }
 }
 </script>
@@ -52,6 +55,12 @@ export default {
       top:-100px;
       border-bottom: 200px solid $nord6;
       border-left: 100vw solid $nord4;
+    }
+  }
+  .scroll {
+    &.up {
+      top: 15px;
+      left: 55px;
     }
   }
 </style>
