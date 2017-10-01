@@ -71,7 +71,7 @@ export default {
     width: 100%;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $nord4;
     .dark-transition {
       position: absolute;
@@ -84,9 +84,6 @@ export default {
       bottom:-100px;
       border-bottom: 200px solid $nord6;
       border-left: 100vw solid $nord4;
-      @media (max-width: 991px) {
-        bottom:0.85%;
-      }
     }
   }
   .scroll {

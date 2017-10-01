@@ -87,16 +87,13 @@ export default {
     width: 100%;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $nord0;
     .medium-transition {
       position: absolute;
       bottom:-100px;
       border-bottom: 200px solid $nord4;
       border-left: 100vw solid $nord0;
-      @media (max-width: 991px) {
-        bottom:0.85%;
-      }
     }
   }
   .scroll {
