@@ -66,7 +66,7 @@ export default {
     width: 100%;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: $nord4;
     .dark-transition {
       position: absolute;

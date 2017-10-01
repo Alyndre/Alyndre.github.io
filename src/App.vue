@@ -31,8 +31,7 @@ export default {
     return {
       fullpageOptions: {
         css3: true,
-        verticalCentered: false,
-        responsive: 1
+        verticalCentered: false
       }
     }
   },
@@ -54,7 +53,7 @@ export default {
     width: 100vh;
     //background: linear-gradient(-10deg, $nord6 50%, $nord0 50%);
     #particles-js {
-      height: 100%;
+      height: 100vh;
       width: 100%;
       position: fixed;
       pointer-events: none;
