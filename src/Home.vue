@@ -94,6 +94,9 @@ export default {
       bottom:-100px;
       border-bottom: 200px solid $nord4;
       border-left: 100vw solid $nord0;
+      @media (max-width: 991px) {
+        bottom:0.85%;
+      }
     }
   }
   .scroll {

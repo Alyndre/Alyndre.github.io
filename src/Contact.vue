@@ -38,6 +38,11 @@ export default {
       margin-left: 10%;
       font-size: 1.6rem;
       color: $nord1;
+      @media (max-width: 991px) {
+        width: 90%;
+        margin:0 auto;
+        text-align: center;
+      }
     }
   }
 

@@ -54,7 +54,12 @@ export default {
       margin-left: 45%;
       font-size: 1.6rem;
       z-index: 2;
-      
+      @media (max-width: 991px) {
+        
+        width: 90%;
+        margin:0 auto;
+        text-align: center;
+      }
     }
   }
 
@@ -79,6 +84,9 @@ export default {
       bottom:-100px;
       border-bottom: 200px solid $nord6;
       border-left: 100vw solid $nord4;
+      @media (max-width: 991px) {
+        bottom:0.85%;
+      }
     }
   }
   .scroll {

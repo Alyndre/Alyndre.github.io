@@ -52,6 +52,13 @@ export default {
     height: 100vh;
     width: 100%;
     //background: linear-gradient(-10deg, $nord6 50%, $nord0 50%);
+    @media (max-width: 991px) {
+      position: absolute;
+      height: 100%;
+      #fullpage {
+        height: 100%;
+      }
+    }
     #particles-js {
       height: 100vh;
       width: 100%;
