@@ -39,7 +39,7 @@ export default {
   
   .slide {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;

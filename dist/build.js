@@ -10749,7 +10749,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "#app{font-family:Raleway,sans-serif;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:100%;width:100%}#app #particles-js{height:100vh;width:100%;position:fixed;pointer-events:none;z-index:1}#app a{text-decoration:none;color:#5e81ac}#app a:hover{text-decoration:underline}", ""]);
+exports.push([module.i, "#app{font-family:Raleway,sans-serif;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:100%;width:100%}#app #particles-js{height:100%;width:100%;position:fixed;pointer-events:none;z-index:1}#app a{text-decoration:none;color:#5e81ac}#app a:hover{text-decoration:underline}", ""]);
 
 // exports
 
@@ -10763,7 +10763,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, ".slide[data-v-5616d001]{position:relative;height:100vh;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.slide[data-v-5616d001],.slide section[data-v-5616d001]{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex}.slide section[data-v-5616d001]{text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:0;flex-shrink:0}.slide section .items[data-v-5616d001]{width:100%}", ""]);
+exports.push([module.i, ".slide[data-v-5616d001]{position:relative;height:100%;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.slide[data-v-5616d001],.slide section[data-v-5616d001]{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex}.slide section[data-v-5616d001]{text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:0;flex-shrink:0}.slide section .items[data-v-5616d001]{width:100%}", ""]);
 
 // exports
 

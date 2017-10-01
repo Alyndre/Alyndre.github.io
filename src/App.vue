@@ -54,7 +54,7 @@ export default {
     width: 100%;
     //background: linear-gradient(-10deg, $nord6 50%, $nord0 50%);
     #particles-js {
-      height: 100vh;
+      height: 100%;
       width: 100%;
       position: fixed;
       pointer-events: none;
