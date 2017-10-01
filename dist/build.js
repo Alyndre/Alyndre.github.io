@@ -13476,7 +13476,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].directive('fullpage', function(el, binding) {
   if (window.innerWidth>991){
-    $(el).fullpage(binding.value);
+    //$(el).fullpage(binding.value);
   }
 });
 

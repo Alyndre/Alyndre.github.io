@@ -4,7 +4,7 @@ import App from './App.vue'
 
 Vue.directive('fullpage', function(el, binding) {
   if (window.innerWidth>991){
-    $(el).fullpage(binding.value);
+    //$(el).fullpage(binding.value);
   }
 });
 
