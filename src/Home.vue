@@ -81,7 +81,7 @@ export default {
 
   .dark-background{
     position: absolute;
-    top:0;
+    top:-100px;
     left:0;
     z-index: -1;
     width: 100%;
