@@ -87,7 +87,7 @@ export default {
     width: 100%;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $nord0;
     .medium-transition {
       position: absolute;
