@@ -3,7 +3,9 @@ import VueParticles from 'vue-particles'
 import App from './App.vue'
 
 Vue.directive('fullpage', function(el, binding) {
-  $(el).fullpage(binding.value);
+  if (window.innerWidth>991){
+    $(el).fullpage(binding.value);
+  }
 });
 
 Vue.use(VueParticles);
